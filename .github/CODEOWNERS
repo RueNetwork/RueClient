@@ -1,0 +1,86 @@
+# We use codeowners to help keep teams in the loop on changes to code
+# they typically work on. Even though this file is called CODEOWNERS,
+# we don't really want to enforce or imply ownership of code, just interest.
+#
+# Anyone can work on anything.
+#
+# Prefer associating a "team" with a path rather than an individual. That allows individuals to
+# move around without having to continually update this file.
+#
+# See https://help.github.com/en/articles/about-code-owners for details on the format of this file
+
+# Root level files and configuration
+/*.* @Automattic/team-calypso
+
+# Scripts
+/bin @Automattic/team-calypso
+
+# Client initialization
+/client/boot @Automattic/team-calypso
+
+# Client blocks
+/client/blocks/inline-help @Automattic/zelda
+
+# Client state
+/client/state/jetpack-connect @Automattic/luna
+/client/state/signup @Automattic/zelda
+
+# Client components
+/client/components/site-verticals-suggestion-search @Automattic/zelda
+
+# Client framework parts
+/client/config @Automattic/team-calypso
+/client/controller @Automattic/team-calypso
+/client/document @Automattic/team-calypso
+/client/layout @Automattic/team-calypso
+
+# Client sites
+/client/my-sites/checklist @Automattic/zelda
+
+# Comments management
+/client/my-sites/comment* @Automattic/serenity
+
+# Developer guides
+/docs/coding-guidelines @Automattic/team-calypso
+/docs/guide @Automattic/team-calypso
+/docs/testing @Automattic/team-calypso
+
+# Gutenberg editor (Gutenframe)
+/client/gutenberg @Automattic/serenity @Automattic/cylon @Automattic/ajax
+
+# Jetpack Connect
+/client/jetpack-connect @Automattic/luna
+
+# Reader
+/client/reader @Automattic/reader
+/client/blocks/reader-* @Automattic/reader
+/client/state/reader @Automattic/reader
+
+# Server infrastructure
+/server @Automattic/team-calypso
+
+# Signup
+/client/signup @Automattic/zelda
+
+# Test infrastructure
+/test @Automattic/team-calypso
+
+# Types, TypeScript, and type annotations
+/client/types.ts @Automattic/type-review
+/docs/coding-guidelines/typescript* @Automattic/type-review
+
+# G Suite
+/client/blocks/gsuite-stats-nudge @Automattic/catalyst
+/client/components/marketing-survey/gsuite-cancel-purchase-dialog @Automattic/catalyst
+/client/components/upgrades/gsuite @Automattic/catalyst
+/client/lib/domains/email-forwarding @Automattic/catalyst
+/client/lib/domains/google-apps-users @Automattic/catalyst
+/client/lib/gsuite @Automattic/catalyst
+/client/my-sites/domains/components/domain-warnings @Automattic/catalyst
+/client/my-sites/email @Automattic/catalyst
+
+# FSE (Full Site Editing)
+/apps/full-site-editing @Automattic/serenity @Automattic/cylon @Automattic/ajax
+
+# WPcom Block Editor
+/apps/wpcom-block-editor @Automattic/serenity @Automattic/cylon @Automattic/ajax

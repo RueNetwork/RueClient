@@ -1,0 +1,14 @@
+.post-actions-ellipsis-menu {
+	display: flex;
+	flex-shrink: 0;
+	margin-left: 8px;
+
+	.ellipsis-menu {
+		display: flex;
+	}
+
+	.ellipsis-menu__toggle {
+		padding: 0 16px;
+		margin-right: -16px;
+	}
+}

@@ -1,0 +1,683 @@
+.masterbar__oauth-client {
+	background-color: var( --color-white );
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0;
+
+		li {
+			list-style-type: none;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	img {
+		display: block;
+	}
+}
+
+.masterbar__oauth-client-main-nav {
+	width: 100%;
+}
+
+.masterbar__oauth-client-current {
+	float: left;
+}
+
+.masterbar__oauth-client-logo img {
+	max-height: 47px;
+}
+
+.masterbar__oauth-client-wpcc-sign-in {
+	background-color: rgba( 255, 255, 255, 0.15 );
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	float: right;
+	line-height: 100%;
+	margin-right: 4px;
+	position: relative;
+	top: 4px;
+
+	&:hover {
+		background: rgba( 255, 255, 255, 0.2 );
+	}
+
+	&::after {
+		clear: both;
+		content: ' ';
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+.masterbar__oauth-client-wpcom {
+	color: rgba( 255, 255, 255, 0.8 );
+	cursor: pointer;
+	float: left;
+	line-height: 32px;
+	padding: 3px 10px;
+
+	&:hover {
+		color: #fff;
+	}
+
+	&:visited {
+		color: rgba( 255, 255, 255, 0.8 );
+	}
+
+	.gridicon {
+		margin-bottom: 5px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+}
+
+.dops {
+	.locale-suggestions {
+		margin-top: 0;
+	}
+}
+
+.crowdsignal {
+	// Crowdsignal color palette
+	--color-accent: #fb5457;
+	--color-button-primary-background-hover: #fb5457;
+	--color-crowdsignal: #384869;
+	--color-link: #384869;
+	--color-text: #384869;
+
+	background: #f2f2f2;
+	color: var( --color-text );
+	font-family: 'Muli', $sans;
+
+	&.is-section-login {
+		padding-bottom: 100px;
+
+		@include breakpoint( '>660px' ) {
+			min-height: calc( 100% - 145px );
+			padding-bottom: 145px;
+		}
+
+		.button {
+			border: 0;
+			border-radius: 0;
+			box-sizing: border-box;
+			font-family: 'Muli', $sans;
+			font-weight: normal;
+			letter-spacing: 0.5px;
+			padding: 12px 20px;
+		}
+
+		.card {
+			background: none;
+			box-shadow: none;
+			border: 0;
+			margin: 0 auto;
+			max-width: 320px;
+			padding: 0;
+		}
+
+		.layout__content {
+			padding: 140px 32px 32px;
+		}
+
+		.logged-out-form__back-link {
+			border: 0;
+			color: var( --color-text );
+			font-weight: normal;
+			line-height: 21px;
+			margin: 30px 0 20px;
+			padding: 10px 16px;
+			text-align: center;
+
+			@include breakpoint( '>660px' ) {
+				margin: 0;
+			}
+
+			&:hover {
+				color: var( --color-text );
+			}
+
+			.gridicon {
+				vertical-align: text-top;
+			}
+		}
+
+		.login {
+			position: relative;
+		}
+
+		.login form {
+			box-sizing: border-box;
+			display: block;
+
+			@include breakpoint( '>660px' ) {
+				background-color: var( --color-white );
+				box-shadow: 0 2px 3px 0 var( --color-neutral-100 );
+				margin: 0 auto;
+				padding: 35px 55px 20px;
+				width: 550px;
+			}
+
+			input[type='text'],
+			input[type='email'],
+			input[type='password'] {
+				padding: 10px 20px;
+			}
+		}
+
+		.login__form {
+			position: inherit;
+		}
+
+		.login__form label {
+			color: var( --color-text );
+			font-weight: normal;
+		}
+
+		.login__form-header {
+			font-size: 25px;
+			color: var( --color-text );
+			font-weight: 600;
+			margin-bottom: 80px;
+
+			@include breakpoint( '>480px' ) {
+				font-size: 32px;
+				margin-bottom: 65px;
+			}
+		}
+
+		.login__form-signup-link {
+			display: none;
+		}
+
+		.login__divider {
+			margin: 10px auto;
+			text-transform: lowercase;
+
+			span {
+				background-color: transparent;
+				color: var( --color-text );
+				font-size: 20px;
+				font-weight: 600;
+			}
+		}
+
+		.login__form-subheader {
+			display: none;
+
+			@include breakpoint( '>660px' ) {
+				color: var( --color-text );
+				display: block;
+				font-size: 20px;
+				font-weight: 600;
+				margin: 0 0 30px;
+				text-align: center;
+			}
+		}
+
+		.login__form-terms {
+			color: var( --color-text );
+			margin: 0;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 84px;
+			text-align: center;
+
+			@include breakpoint( '>480px' ) {
+				top: 106px;
+			}
+
+			@include breakpoint( '>660px' ) {
+				display: none;
+			}
+
+			&.login__form-terms-bottom {
+				display: none;
+
+				@include breakpoint( '>660px' ) {
+					display: block;
+					position: initial;
+					margin-bottom: 30px;
+				}
+			}
+
+			a {
+				font-weight: 600;
+			}
+		}
+
+		.magic-login form {
+			input[type='text'],
+			input[type='email'],
+			input[type='password'] {
+				padding: 10px 20px;
+			}
+
+			label {
+				color: var( --color-text );
+				font-weight: normal;
+			}
+		}
+
+		.magic-login .button {
+			margin: 0;
+
+			&:disabled {
+				background-color: var( --color-neutral-50 );
+				color: var( --color-white );
+			}
+		}
+
+		.magic-login .logged-out-form p {
+			margin-bottom: 50px;
+			text-align: center;
+		}
+
+		.magic-login__footer a {
+			color: var( --color-text );
+			font-weight: normal;
+			margin: 20px 0 15px;
+			padding: 10px 16px;
+			text-align: center;
+		}
+
+		.magic-login__form {
+			box-sizing: border-box;
+			display: block;
+
+			@include breakpoint( '>660px' ) {
+				background-color: var( --color-white );
+				box-shadow: 0 2px 3px 0 var( --color-neutral-100 );
+				margin: 0 auto;
+				max-width: 550px;
+				padding: 40px 55px 30px;
+			}
+		}
+
+		.magic-login__form-action {
+			margin-top: 40px;
+		}
+
+		.magic-login__form-header {
+			margin: 0 0 24px;
+		}
+
+		.social-buttons__button {
+			border: 1px solid #cecfd1;
+			border-radius: 0;
+
+			&:last-of-type {
+				margin-bottom: 40px;
+			}
+		}
+
+		.translator-invite {
+			display: none;
+		}
+
+		.wp-login__crowdsignal-footer {
+			background-color: var( --color-crowdsignal );
+			box-sizing: border-box;
+			color: var( --color-neutral-0 );
+			display: flex;
+			flex-direction: row;
+			fill: var( --color-neutral-0 );
+			height: 58px;
+			padding: 20px 40px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.wp-login__crowdsignal-footer-text {
+			display: none;
+			font-size: 10px;
+			flex: 1;
+			height: 18px;
+			letter-spacing: 0.8px;
+			line-height: 16px;
+			text-align: center;
+			text-transform: uppercase;
+
+			&:last-child {
+				display: inline;
+			}
+
+			@include breakpoint( '>660px' ) {
+				display: inline;
+				text-align: left;
+
+				&:last-child {
+					text-align: right;
+				}
+			}
+
+			.automattic-logo,
+			.gridicon {
+				margin: 0 5px;
+				vertical-align: bottom;
+			}
+		}
+
+		.wp-login__footer--oauth {
+			align-items: center;
+			box-sizing: border-box;
+			flex-direction: column;
+			height: auto;
+			padding: 20px 20px 78px;
+
+			@include breakpoint( '>660px' ) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		.wp-login__footer-links a {
+			color: var( --color-text );
+		}
+
+		.wp-login__links {
+			padding: 20px 0 15px;
+
+			a,
+			button {
+				border: 0;
+				color: var( --color-text );
+				line-height: 21px;
+				padding: 10px 16px;
+				text-align: center;
+
+				&:hover,
+				&:active {
+					color: var( --color-text );
+				}
+			}
+		}
+
+		.wp-login__main.main {
+			max-width: 550px;
+			margin-bottom: 80px;
+		}
+	}
+}
+
+.woo {
+	background: #e6e6e6;
+	min-height: 100%;
+
+	.masterbar__oauth-client {
+		background-color: #fff;
+		border: 1px solid #d3d3d3;
+		box-sizing: border-box;
+		height: 85px;
+		line-height: 83px;
+		margin: 0 auto;
+		z-index: 100;
+
+		nav {
+			box-sizing: border-box;
+			max-width: 1500px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 55px;
+			padding-right: 13px;
+		}
+	}
+
+	.masterbar__oauth-client-logo {
+		padding-top: 23px;
+		transition: 0.05 all ease-in-out;
+
+		img {
+			max-height: 37px;
+		}
+	}
+
+	.masterbar__oauth-client-close {
+		float: right;
+
+		a {
+			color: #999;
+			font-size: 0.9em;
+			font-weight: bold;
+			padding: 32px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+
+	.button.is-primary {
+		background-color: #a46497;
+		border-radius: 100px;
+		border: none;
+		color: #fff;
+		font-size: 1.1em;
+		padding: 15px 50px;
+		text-decoration: none;
+		text-transform: capitalize;
+		width: auto;
+
+		@include breakpoint( '>480px' ) {
+			width: 100%;
+		}
+
+		&:hover,
+		&:focus {
+			background: #696969;
+		}
+
+		&:disabled {
+			background-color: #dddddd;
+		}
+	}
+
+	.login__form,
+	.login__social,
+	.logged-out-form,
+	.two-factor-authentication__actions {
+		.button {
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.login__form,
+	.magic-login {
+		.button {
+			float: none;
+			margin: 0;
+		}
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	textarea {
+		background-color: #fff;
+		border: 1px solid #e6e6e6;
+		border-radius: 3px;
+		box-sizing: border-box;
+		color: #666;
+		font-size: 1.25em;
+		line-height: 1.563;
+		padding: 0.7em;
+		transition: all ease-in-out 0.2s;
+		width: 100%;
+
+		&:focus,
+		&.is-error:hover {
+			border: 1px solid #e6e6e6;
+			box-shadow: 0 0 5px 0 rgba( 113, 176, 47, 0.8 );
+			outline: 0;
+		}
+	}
+
+	.form-password-input .form-password-input__toggle-visibility {
+		top: 18px;
+	}
+
+	.login__form-header-wrapper {
+		text-align: center;
+	}
+
+	.login__form-action,
+	.magic-login__form-action {
+		text-align: center;
+	}
+
+	.login__social-buttons {
+		margin-top: 0;
+
+		@include breakpoint( '>660px' ) {
+			flex-direction: row;
+
+			button:not(:first-of-type) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.wp-login__main.main,
+	.magic-login.main {
+		max-width: 778px;
+	}
+
+	$woo-form-whitespace: 16px;
+	$woo-form-whitespace-480: 24px;
+	$woo-form-whitespace-660: 100px;
+
+	.card {
+		box-shadow: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.wp-login__container,
+	.magic-login,
+	.step-wrapper {
+		background: #fff;
+		border: 1px solid #d3d3d3;
+		border-radius: 5px;
+		box-sizing: border-box;
+		padding: 20px $woo-form-whitespace;
+		width: 100%;
+
+		@include breakpoint( '>480px' ) {
+			padding: 20px $woo-form-whitespace-480;
+		}
+
+		@include breakpoint( '>660px' ) {
+			padding: 20px $woo-form-whitespace-660;
+		}
+	}
+
+	.step-wrapper {
+		margin: 0 auto 50px;
+		max-width: 778px;
+	}
+
+	.logged-out-form {
+		max-width: 100%;
+	}
+
+	.logged-out-form label,
+	.login__form-userdata label {
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	.login__form-signup-link {
+		font-size: 15px;
+	}
+
+	.login__social,
+	.two-factor-authentication__actions {
+		border-top: 1px solid #e6e6e6;
+		margin: 0 -16px;
+		padding-top: 44px;
+		width: calc( 100% + ( #{$woo-form-whitespace} * 2 ) );
+
+		@include breakpoint( '>480px' ) {
+			margin: 0 -24px;
+			width: calc( 100% + ( #{$woo-form-whitespace-480} * 2 ) );
+		}
+
+		@include breakpoint( '>660px' ) {
+			margin: 0 -100px;
+			width: calc( 100% + ( #{$woo-form-whitespace-660} * 2 ) );
+		}
+	}
+
+	.wp-login__links {
+		margin-top: 20px;
+
+		a,
+		button {
+			border: none;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 3em;
+			text-align: center;
+		}
+	}
+
+	.logged-out-form__footer {
+		background: none;
+		border: none;
+		text-align: center;
+	}
+
+	.logged-out-form__links {
+		text-align: center;
+	}
+
+	// Signup styles
+	.signup__step {
+		background: linear-gradient( to bottom, #e6e6e6, transparent );
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+
+	&.is-section-signup::before,
+	&.is-section-signup .layout__primary::before {
+		display: none;
+	}
+
+	.formatted-header__title {
+		font-size: 1.6em;
+		font-family: $sans;
+		margin: 0 0 8px;
+		padding: 0;
+
+		@include breakpoint( '>480px' ) {
+			font-size: 2em;
+			margin: 2em 0 0;
+		}
+	}
+}
+
+// Adding some CSS to cover the --color-primary
+// background color in the signup flow for Akismet.
+.layout.dops.akismet {
+	background: var( --color-neutral-0 );
+	min-height: 100%;
+
+	// When completing the Akismet signup flow
+	// ensure the text color is legible.
+	.signup-processing__content {
+		color: var( --color-text );
+	}
+}

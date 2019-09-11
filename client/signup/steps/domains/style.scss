@@ -1,0 +1,36 @@
+.domains__step-section-wrapper {
+	margin: 0 auto;
+	max-width: 720px;
+}
+
+.is-section-signup .domains__step-content {
+	.search .search__icon-navigation {
+		background: none;
+	}
+
+	.register-domain-step__search-card {
+		border-radius: 3px;
+		@include elevation( 2dp );
+	}
+
+	.search.is-open.has-focus {
+		border: none;
+		border-radius: 3px;
+		box-shadow: 0 0 0 3px var( --color-accent-light );
+	}
+
+	.search-filters__dropdown-filters {
+		border-radius: 0 3px 3px 0;
+	}
+
+	.search-filters__dropdown-filters.search-filters__dropdown-filters--is-open {
+		box-shadow: 0 0 0 3px var( --color-accent-light );
+	}
+
+	@include breakpoint( '<660px' ) {
+		.register-domain-step__search-card,
+		.search.is-open.has-focus {
+			border-radius: 0;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.remove-purchase__card {
+	color: var( --color-primary );
+	text-align: left;
+	width: 100%;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: var( --color-link-dark );
+	}
+
+	.gridicon {
+		margin-top: -2px;
+		margin-right: 4px;
+		vertical-align: middle;
+	}
+}

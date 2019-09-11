@@ -1,0 +1,298 @@
+.manage-purchase__info {
+	font-size: 13px;
+	padding: 0;
+
+	@include breakpoint( '>660px' ) {
+		font-size: 14px;
+		padding: 0;
+	}
+
+	&.is-expired {
+		background: var( --color-neutral-0 );
+
+		.manage-purchase__header,
+		.manage-purchase__content,
+		.manage-purchase__detail-label,
+		.manage-purchase__detail,
+		.manage-purchase__detail .user {
+			opacity: 0.7;
+		}
+	}
+
+	&.is-expired + .notice {
+		margin-top: -10px;
+
+		@include breakpoint( '>480px' ) {
+			margin-top: -16px;
+		}
+	}
+
+	&.is-placeholder {
+		.manage-purchase__plan-icon,
+		.manage-purchase__title,
+		.manage-purchase__subtitle,
+		.manage-purchase__description,
+		.manage-purchase__settings-link,
+		.manage-purchase__detail-label,
+		.manage-purchase__detail {
+			@include placeholder( 23% );
+
+			display: block;
+		}
+
+		.manage-purchase__plan-icon {
+			height: 56px;
+			border-radius: 50%;
+		}
+
+		.manage-purchase__header {
+			border-bottom: 2px solid var( --color-neutral-0 );
+		}
+
+		.manage-purchase__subtitle,
+		.manage-purchase__title {
+			margin-bottom: 3px;
+			margin-left: 64px;
+		}
+
+		.manage-purchase__detail-label {
+			margin-bottom: 3px;
+		}
+
+		.manage-purchase__settings-link {
+			width: 30%;
+		}
+
+		.manage-purchase__subtitle {
+			width: 40%;
+		}
+
+		.manage-purchase__title {
+			width: 60%;
+		}
+
+		@include breakpoint( '>660px' ) {
+			.manage-purchase__description,
+			.manage-purchase__detail,
+			.manage-purchase__detail-label {
+				height: 40px;
+			}
+		}
+
+		@include breakpoint( '<660px' ) {
+			.manage-purchase__detail {
+				width: 25%;
+			}
+
+			.manage-purchase__detail-label {
+				width: 70%;
+			}
+		}
+	}
+}
+
+.manage-purchase__header,
+.manage-purchase__content {
+	padding: 16px 24px;
+
+	@include breakpoint( '<660px' ) {
+		padding: 16px;
+	}
+}
+
+.manage-purchase__header {
+	overflow: auto;
+	border-bottom: 2px solid var( --color-accent );
+
+	.is-personal & {
+		border-bottom: 2px solid var( --color-plan-personal );
+	}
+
+	.is-premium & {
+		border-bottom: 2px solid var( --color-plan-premium );
+	}
+
+	.is-business & {
+		border-bottom: 2px solid var( --color-plan-business );
+	}
+}
+
+.manage-purchase__plan-icon {
+	margin: 0 12px 0 0;
+	max-width: 56px;
+	width: 56px;
+	float: left;
+
+	.gridicon {
+		box-sizing: border-box;
+		padding: 4px;
+		border-radius: 50%;
+		background: var( --color-accent );
+		fill: var( --color-white );
+	}
+
+	.gridicons-themes {
+		border-radius: 8px;
+	}
+}
+
+.manage-purchase__title {
+	color: var( --color-text );
+	display: block;
+	font-size: 18px;
+	font-weight: 400;
+	clear: none;
+
+	@include breakpoint( '>660px' ) {
+		font-size: 22px;
+		padding-right: 100px;
+	}
+}
+
+.manage-purchase__price .plan-price {
+	clear: none;
+}
+
+.manage-purchase__description {
+	color: var( --color-text-subtle );
+	display: block;
+}
+
+.manage-purchase__settings-link {
+	display: block;
+	margin-top: 16px;
+}
+
+.manage-purchase__meta {
+	display: flex;
+	margin: 0;
+	list-style: none;
+	overflow: auto;
+	padding: 0 24px;
+	border-top: 1px solid var( --color-neutral-0 );
+
+	@include breakpoint( '<660px' ) {
+		flex-direction: column;
+		padding: 0 16px 16px;
+	}
+
+	li {
+		color: var( --color-neutral-600 );
+		font-size: 13px;
+
+		@include breakpoint( '<660px' ) {
+			clear: both;
+			overflow: auto;
+			margin-top: 15px;
+		}
+
+		@include breakpoint( '>660px' ) {
+			box-sizing: border-box;
+			flex: 1 1 auto;
+			font-size: 14px;
+			text-align: center;
+			padding: 15px 8px 12px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			&:first-child:nth-last-child( 4 ),
+			&:first-child:nth-last-child( 4 ) ~ li {
+				  max-width: 25%;
+			}
+		}
+
+		+ li {
+			@include breakpoint( '>660px' ) {
+				border-left: 1px solid var( --color-neutral-0 );
+			}
+		}
+
+		> a {
+			color: var( --color-neutral-600 );
+			display: block;
+			text-decoration: none;
+		}
+	}
+}
+
+.manage-purchase__detail-label {
+	font-style: normal;
+	font-weight: 600;
+
+	@include breakpoint( '<660px' ) {
+		flex-direction: row;
+		float: left;
+	}
+
+	@include breakpoint( '>660px' ) {
+		color: var( --color-text-subtle );
+		display: block;
+		font-family: $sans;
+		font-size: 12px;
+		font-weight: 400;
+		margin: 0 0 12px;
+	}
+}
+
+.manage-purchase__detail {
+	@include breakpoint( '<660px' ) {
+		text-align: right;
+	}
+
+	display: block;
+
+	.payment-logo {
+		margin-right: 5px;
+	}
+
+	a {
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.manage-purchase__detail .user__name {
+	margin-right: 0;
+}
+
+.manage-purchase__expiring-credit-card-notice.notice,
+.manage-purchase__purchase-expiring-notice.notice {
+	margin-bottom: 10px;
+
+	@include breakpoint( '>660px' ) {
+		margin-bottom: 16px;
+	}
+}
+
+.manage-purchase__renew-button {
+	@include breakpoint( '<660px' ) {
+		margin-top: 16px;
+		width: 100%;
+	}
+
+	@include breakpoint( '>660px' ) {
+		position: absolute;
+		right: 24px;
+		top: 16px;
+	}
+}
+
+.manage-purchase__contact-support {
+	color: var( --color-text-subtle );
+	border-top: solid 1px var( --color-neutral-0 );
+	margin: 0 auto;
+	padding: 16px;
+	background: var( --color-white );
+
+	@include breakpoint( '>480px' ) {
+		padding: 16px 24px;
+	}
+}
+
+.manage-purchase__detail-date-span {
+	white-space: nowrap;
+}

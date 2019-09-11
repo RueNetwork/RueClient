@@ -1,0 +1,97 @@
+.community-translator {
+	position: fixed;
+	bottom: 66px;
+	right: 24px;
+	border-radius: 27px;
+	background: var( --color-primary );
+	cursor: pointer;
+	padding: 4px;
+	font-size: 13px;
+	z-index: z-index( 'root', '.community-translator' );
+
+	&.is-active {
+		background: var( --color-accent );
+	}
+}
+
+.community-translator__button {
+	align-items: center;
+	color: var( --color-white );
+	text-decoration: none;
+	outline: 0;
+	display: flex;
+	cursor: pointer;
+
+	&:hover {
+		color: var( --color-white );
+
+		.community-translator__text {
+			transition: all 0.15s ease-in-out;
+			width: auto;
+			margin-right: 6px;
+			padding: 0 2px;
+		}
+	}
+}
+
+.community-translator__text {
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+// Overwriting the popup defaults
+body {
+	.webui-popover {
+		border-radius: 2px;
+		padding: 0;
+		text-align: inherit;
+		border-color: var( --color-neutral-100 );
+		z-index: z-index( 'root', 'body .webui-popover' ); // Appear above dialog
+
+		.webui-popover-title {
+			background-color: var( --color-neutral-100 );
+			border-color: var( --color-neutral-0 );
+			border-radius: 1px 1px 0 0;
+		}
+
+		&.top,
+		&.top-right,
+		&.top-left {
+			.arrow {
+				border-top-color: var( --color-neutral-100 );
+			}
+		}
+
+		&.right,
+		&.right-top,
+		&.right-bottom {
+			.arrow {
+				border-right-color: var( --color-neutral-100 );
+			}
+		}
+
+		&.left,
+		&.left-top,
+		&.left-bottom {
+			.arrow {
+				border-left-color: var( --color-neutral-100 );
+			}
+		}
+
+		&.bottom,
+		&.bottom-right,
+		&.bottom-left {
+			.arrow {
+				border-bottom-color: var( --color-neutral-100 );
+				&::after {
+					border-bottom-color: var( --color-neutral-100 );
+				}
+			}
+		}
+	}
+}
+
+.community-translator__modal {
+	max-width: 400px;
+}

@@ -1,0 +1,24 @@
+.reader-export-button {
+	cursor: pointer;
+
+	&:hover {
+		.reader-export-button__icon {
+			fill: var( --color-accent );
+		}
+
+		.reader-export-button__label {
+			color: var( --color-accent );
+		}
+	}
+}
+
+.reader-export-button__icon {
+	fill: var( --color-neutral-light );
+	vertical-align: middle;
+}
+
+.reader-export-button__label {
+	font-size: 14px;
+	color: var( --color-text-subtle );
+	padding-left: 4px;
+}

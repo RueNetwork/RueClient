@@ -1,0 +1,50 @@
+// The customizer is full-width
+.main.customize {
+	max-width: 100%;
+}
+
+.main.customize.is-iframe {
+	background-color: var( --color-neutral-0 );
+	margin: 0;
+	overflow-y: scroll;
+	padding: 0;
+	z-index: z-index( 'root', '.main.customize.is-iframe' );
+	-webkit-overflow-scrolling: touch;
+	min-height: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: auto;
+
+	iframe {
+		height: 100%;
+		position: absolute;
+		top: -1000px;
+		width: 100%;
+
+		&.is-iframe-loaded {
+			top: 0;
+		}
+	}
+}
+
+.customizer-loading-panel__notice {
+	&.is-iframe-loaded {
+		display: none;
+	}
+}
+
+.customizer-loading-panel__notice-label {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	padding: 20px;
+	text-align: center;
+
+	.spinner {
+		margin: 0 auto 20px;
+	}
+}

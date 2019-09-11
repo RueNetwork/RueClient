@@ -1,0 +1,43 @@
+.security-2fa-enable .security-2fa-enable__cancel {
+	float: left;
+	margin-left: 0;
+}
+
+.security-2fa-enable__code-block {
+	margin-bottom: 16px;
+}
+
+.security-2fa-enable__qr-code {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+
+	&.is-placeholder {
+		@include placeholder( 23% );
+	}
+}
+
+.security-2fa-enable__app-options {
+	font-color: var( --color-neutral-0 );
+	font-size: 13px;
+	font-style: italic;
+	margin-top: 10px;
+}
+
+.security-2fa-enable__time-code {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.security-2fa-enable__toggle {
+	cursor: pointer;
+	display: block;
+}
+
+.security-2fa-enable .notice {
+	margin: 5px 0 0;
+}
+
+.security-2fa-enable__buttons-bar {
+	margin-top: 16px;
+}

@@ -1,0 +1,28 @@
+.purchases-site {
+	margin-bottom: 15px;
+
+	.site-icon {
+		display: inline-block;
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+}
+
+.purchases-site__slug {
+	color: var( --color-neutral );
+	font-size: 12px;
+}
+
+.purchases-site__slug {
+	white-space: nowrap;
+
+	@include breakpoint( '<660px' ) {
+		line-height: 15px;
+	}
+}
+
+.purchases-list .action-card__illustration {
+	@include breakpoint( '>960px' ) {
+		margin: -40px 20px 0 -20px;
+	}
+}

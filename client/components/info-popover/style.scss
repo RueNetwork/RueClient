@@ -1,0 +1,24 @@
+.info-popover {
+	.gridicon {
+		cursor: pointer;
+		color: var( --color-text-subtle );
+	}
+
+	.accessible-focus &:focus,
+	&:hover,
+	&.is-active {
+		.gridicon {
+			color: var( --color-neutral-700 );
+		}
+	}
+}
+
+.popover.info-popover__tooltip {
+	.popover__inner {
+		color: var( --color-neutral-500 );
+		font-size: 13px;
+		max-width: 220px;
+		padding: 16px;
+		text-align: left;
+	}
+}

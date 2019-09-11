@@ -1,0 +1,214 @@
+.layout:not( .is-jetpack-woocommerce-flow ):not( .is-wccom-oauth-flow ) {
+	.login.is-jetpack {
+		.button.is-primary {
+			background-color: var( --color-jetpack );
+			border-color: var( --color-jetpack-dark );
+		}
+	}
+}
+
+.layout.is-wccom-oauth-flow {
+	.layout__content {
+		padding-top: 48px;
+	}
+
+	.masterbar {
+		display: none;
+	}
+
+	.wp-login__footer-links {
+		display: none;
+	}
+}
+
+.layout.is-jetpack-woocommerce-flow,
+.layout.is-wccom-oauth-flow {
+	.login__jetpack-logo,
+	.login__woocommerce-logo {
+		text-align: center;
+		border-bottom: 1px solid var( --color-gray-50 );
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 56px;
+
+		svg > g {
+			transform: translateX( 25% );
+		}
+	}
+
+	.login__woocommerce-logo {
+		svg > g {
+			transform: translateX( 50% );
+		}
+	}
+
+	.jetpack-header,
+	.connect-header {
+		margin: 0;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 0;
+		display: block;
+		height: 56px;
+		border-bottom: 1px solid var( --color-woocommerce-header-border );
+		background: #fff;
+
+		svg {
+			margin-top: 15px;
+		}
+	}
+
+	.login__form-header {
+		margin-top: 32px;
+	}
+
+	.login__header-subtitle {
+		color: var( --color-primary-100 );
+		margin-top: 1em;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
+	}
+
+	.jetpack-logo__icon-circle {
+		fill: var( --color-gray-800 );
+	}
+
+	.jetpack-logo__icon-triangle {
+		fill: var( --color-gray-0 );
+	}
+
+	.login__form-action .form-button {
+		border: 0;
+		box-shadow: none;
+	}
+
+	.jetpack-header__partner-logo-plus svg {
+		stroke: var( --color-gray-800 );
+	}
+
+	.jetpack-header__partner-logo-plus .gridicon {
+		color: var( --color-gray-800 );
+	}
+}
+
+.card.login__form {
+	margin-bottom: 0;
+}
+
+.login__form .login__form-userdata {
+	label {
+		color: var( --color-neutral-700 );
+		display: block;
+		font-size: 14px;
+		line-height: 1.5;
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+
+	input {
+		margin-bottom: 20px;
+		transition: none;
+
+		/*!rtl:ignore*/
+		direction: ltr;
+
+		&.is-error {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.login__form-change-username {
+	color: var( --color-link );
+	font-weight: inherit;
+	cursor: pointer;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var( --color-link-dark );
+	}
+
+	.gridicon {
+		margin-right: 3px;
+		vertical-align: text-bottom;
+	}
+}
+
+.login__form .form-input-validation {
+	margin-bottom: 5px;
+}
+
+.login__form-action {
+	button {
+		width: 100%;
+	}
+}
+
+.login__form-header-wrapper {
+	text-align: center;
+
+	.gridicon {
+		color: var( --color-primary );
+	}
+
+	.visit-site {
+		margin: -12px 0 24px;
+	}
+}
+
+.login__form-header {
+	font-size: 22px;
+	margin-bottom: 24px;
+	margin-top: 16px;
+	text-align: center;
+
+	body.is-section-signup & {
+		color: var( --color-white );
+	}
+}
+
+.login__form-terms,
+.login__form-signup-link {
+	font-size: 11px;
+	text-align: center;
+
+	a {
+		white-space: pre;
+	}
+}
+
+.login__form-signup-link {
+	clear: both;
+	font-size: 13px;
+	padding-top: 20px;
+
+	&.disabled {
+		a,
+		a:hover {
+			pointer-events: none;
+			color: var( --color-text-subtle );
+		}
+	}
+}
+
+.login__form-password.is-hidden {
+	// hide the password field in a way that still makes it "visible" for password managers.
+	// 1Password doesn't fill the field if it has display:none or visibility:hidden.
+	position: fixed;
+	bottom: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.login__jetpack-logo {
+	@include breakpoint( '<660px' ) {
+		margin-top: 20px;
+	}
+}

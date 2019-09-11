@@ -1,0 +1,49 @@
+.post-edit-button {
+	display: inline-flex;
+	align-items: center;
+	box-sizing: border-box;
+	color: var( --color-text-subtle );
+	cursor: pointer;
+	list-style-type: none;
+	padding: 4px;
+	position: relative;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		.gridicon {
+			fill: var( --color-accent );
+		}
+
+		.post-edit-button__label {
+			color: var( --color-accent );
+		}
+	}
+
+	.gridicon {
+		fill: var( --color-neutral-light );
+		top: -1px;
+	}
+
+	.post-edit-button__label {
+		color: var( --color-text-subtle );
+
+		@include breakpoint( '<480px' ) {
+			display: none;
+		}
+	}
+}
+
+.post-edit-button__label {
+	font-size: 14px;
+	margin-left: 4px;
+
+	@include breakpoint( '<480px' ) {
+		display: none;
+	}
+}
+
+.post-edit-button__icon {
+	position: relative;
+}

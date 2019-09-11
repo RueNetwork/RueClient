@@ -1,0 +1,43 @@
+
+.plans-features-main__group {
+	@include breakpoint( '>1040px' ) {
+		padding-top: 19px; // popular banner height adjustment
+	}
+
+	+ .faq {
+		margin-top: 20px;
+	}
+}
+
+// Required additional specificity
+.plans-features-main .plans-features-main__happychat-button {
+	color: var( --color-primary );
+	font-weight: normal;
+	padding: 0;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: var( --color-primary );
+	}
+}
+
+.plans-features-main__banner {
+	text-align: center;
+	padding: 5px 0;
+}
+
+.plans-features-main__banner-content {
+	display: inline-block;
+	background: var( --color-white );
+	border-radius: 3px;
+	padding: 2px 12px;
+	@include elevation ( 2dp );
+
+	button.is-borderless {
+		color: var( --color-accent );
+		text-decoration: underline;
+		vertical-align: baseline;
+		margin-left: 0.5em;
+	}
+}

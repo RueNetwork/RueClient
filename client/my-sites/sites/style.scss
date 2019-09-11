@@ -1,0 +1,29 @@
+.main.sites {
+	max-width: 320px;
+}
+
+.sites__select-header {
+	text-align: center;
+
+	.visit-site {
+		margin: -12px 0 24px;
+	}
+}
+
+.sites__select-heading {
+	font-size: 22px;
+	margin-top: 16px;
+	margin-bottom: 24px;
+
+	strong {
+		text-transform: capitalize;
+	}
+}
+
+.sites__select-wrapper.card {
+	padding: 0;
+
+	.site-selector {
+		overflow: auto;
+	}
+}
