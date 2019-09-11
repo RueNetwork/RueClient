@@ -27,6 +27,7 @@ $ git clone https://github.com/RueNetwork/RueClient.git
 $ cd RueClient
 $ npm start
 ```
+Calypso is known to have errors building in a windows environment. It will need to be installed by an experienced developer until stable binaries are produced.
 
 _Note - if you are planning on pushing changes back to Calypso, this workflow will ask you for a username and password every time you push a change, which will not work if you have GitHub 2-factor auth enabled.  In this case you should use `git clone git@github.com:Automattic/wp-calypso.git` instead, and follow the instructions [here](https://help.github.com/articles/about-ssh/) to set up authentication._
 
