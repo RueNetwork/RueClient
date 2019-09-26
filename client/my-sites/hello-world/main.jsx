@@ -9,34 +9,52 @@ import React from 'react';
 import Main from 'components/main';
 
 export default class HelloWorld extends React.Component {
+  componentDidMount() {
+    const jquery = document.createElement("script");
+    jquery.src = "/jQuery.js";
+
+    // script.innerHTML = "var connection = new WebSocket('ws://localhost:8080'); connection.onmessage = function(message){ console.log(message) }"
+    document.body.appendChild(jquery);
+
+
+    const script = document.createElement("script");
+    script.src = "/smartContract.js";
+
+    // script.innerHTML = "var connection = new WebSocket('ws://localhost:8080'); connection.onmessage = function(message){ console.log(message) }"
+    document.body.appendChild(script);
+
+
+
+  }
+
   render() {
     return (
       <Main className="hello-world">
         <div class="contract-container">
           <h1 className="hello-world__title">Deploy Token</h1>
           <br />
-          <form method="POST" action="/deployContract">
+          <form class="deployContractForm" id="deployContractForm" action="/deployContract" type="POST">
             <label>Name Of Token</label>
             <br />
-            <input type="text" name="token-name" class="token-input"></input>
+            <input type="text" name="token-name" class="token-input" required defaultValue="ZenMediaToken"></input>
             <br />
             <br />
 
             <label>Token Symbol</label>
             <br />
-            <input type="text" name="token-symbol" class="token-input"></input>
+            <input type="text" name="token-symbol" class="token-input" required defaultValue="ZENMEDIA"></input>
             <br />
             <br />
 
             <label>How Many Decimal Places (1-8)</label>
             <br />
-            <input type="number" name="decimal-places" min="1" max="8" class="token-input" ></input>
+            <input type="number" name="decimal-places" min="1" max="8" class="token-input" required defaultValue="8"></input>
             <br />
             <br />
 
             <label>Amount Of Tokens To Be Issued</label>
             <br />
-            <input type="number" name="total-supply" min="1" class="token-input"></input>
+            <input type="number" name="total-supply" min="1" class="token-input" required defaultValue="1000000000000"></input>
             <br />
             <br />
 
@@ -108,7 +126,7 @@ export default class HelloWorld extends React.Component {
             {/*<br />*/}
             {/*<br />*/}
 
-            <button class="button" type="submit">GENERATE AND DEPLOY CONTRACT</button>
+            <button class="button contractButton" type="submit">GENERATE AND DEPLOY CONTRACT</button>
           </form>
         </div>
 

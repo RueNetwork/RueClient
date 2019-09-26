@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+package-lock.json merge=npm-merge-driver
+npm-shrinkwrap.json merge=npm-merge-driver
+*.js linguist-language=JSX

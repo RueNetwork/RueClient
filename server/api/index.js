@@ -10,6 +10,11 @@ const bodyParser = require('body-parser');
 const updateContract = require('../../scripts/updateContract');
 const compileAndDeployContract = require('../../scripts/compileAndDeployContract');
 
+const WebSocket = require('ws')
+
+const wss = new WebSocket.Server({ port: 8080 })
+const path = require('path');
+
 
 // console.log(web3);
 
@@ -23,6 +28,9 @@ const version = require( '../../package.json' ).version,
 module.exports = function() {
 	const app = express();
 
+  app.use(express.static(path.join(__dirname, '../../javascripts')));
+
+
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.get( '/version', function( request, response ) {
@@ -33,25 +41,23 @@ module.exports = function() {
 
 	app.post('/deployContract', async function(req, res){
 
-		const tokenName = req.body['token-name'];
-		const tokenSymbol = req.body['token-symbol'];
-		const totalSupply = req.body['total-supply'];
-    const decimalPlaces = req.body['decimal-places'];
+		try {
 
-    console.log(tokenName, tokenSymbol, decimalPlaces, totalSupply);
+      const tokenName = req.body['token-name'];
+      const tokenSymbol = req.body['token-symbol'];
+      const totalSupply = req.body['total-supply'];
+      const decimalPlaces = req.body['decimal-places'];
 
-    const contractPath = await updateContract(tokenName, tokenSymbol, totalSupply, decimalPlaces);
-    const deployResponse = await compileAndDeployContract(contractPath, tokenSymbol);
+      console.log(tokenName, tokenSymbol, decimalPlaces, totalSupply);
 
-    console.log(deployResponse);
+      const contractPath = await updateContract(tokenName, tokenSymbol, totalSupply, decimalPlaces);
+      const deployResponse = compileAndDeployContract(contractPath, tokenSymbol, wss);
 
-    const transactionHash = deployResponse.transactionHash;
-
-    const ropsteinUrl = 'https://ropsten.etherscan.io/tx'
-
-    const ropsteinTransaction = `${ropsteinUrl}/${transactionHash}`;
-
-    res.send('Congratulations your contract was successfully created, deployed and confirmed. You can view it live on the blockchain at ' + ropsteinTransaction)
+      res.send('Success')
+    } catch(err){
+		  console.log(err);
+			res.json(err);
+		}
 	});
 
 	if ( config.isEnabled( 'oauth' ) ) {

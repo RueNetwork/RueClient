@@ -9287,6 +9287,15 @@
 					"resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
 					"integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=",
 					"dev": true
+				},
+				"ws": {
+					"version": "6.1.4",
+					"resolved": "https://registry.npmjs.org/ws/-/ws-6.1.4.tgz",
+					"integrity": "sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==",
+					"dev": true,
+					"requires": {
+						"async-limiter": "~1.0.0"
+					}
 				}
 			}
 		},
@@ -9325,6 +9334,14 @@
 					"version": "2.0.0",
 					"resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
 					"integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
+				},
+				"ws": {
+					"version": "6.1.4",
+					"resolved": "https://registry.npmjs.org/ws/-/ws-6.1.4.tgz",
+					"integrity": "sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==",
+					"requires": {
+						"async-limiter": "~1.0.0"
+					}
 				}
 			}
 		},
@@ -25172,6 +25189,14 @@
 					"version": "4.17.15",
 					"resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
 					"integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
+				},
+				"ws": {
+					"version": "6.2.1",
+					"resolved": "https://registry.npmjs.org/ws/-/ws-6.2.1.tgz",
+					"integrity": "sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==",
+					"requires": {
+						"async-limiter": "~1.0.0"
+					}
 				}
 			}
 		},
@@ -25811,11 +25836,11 @@
 			}
 		},
 		"ws": {
-			"version": "6.1.4",
-			"resolved": "https://registry.npmjs.org/ws/-/ws-6.1.4.tgz",
-			"integrity": "sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==",
+			"version": "7.1.2",
+			"resolved": "https://registry.npmjs.org/ws/-/ws-7.1.2.tgz",
+			"integrity": "sha512-gftXq3XI81cJCgkUiAVixA0raD9IVmXqsylCrjRygw4+UOOGzPoxnQ6r/CnVL9i+mDncJo94tSkyrtuuQVBmrg==",
 			"requires": {
-				"async-limiter": "~1.0.0"
+				"async-limiter": "^1.0.0"
 			}
 		},
 		"x-is-string": {
