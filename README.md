@@ -34,3 +34,7 @@ You can learn more about Rue and the Rue Network in our [introduction piece](htt
 5.	Open [`calypso.localhost:3000`](http://calypso.localhost:3000/) in your browser.
 
 Need more detailed installation instructions? [We have them](./docs/install.md).
+
+# Deployment of Token:
+
+Depending on the version you are running you may need to navigate to http://calypso.localhost:3000/hello-world to interact with the token contract
