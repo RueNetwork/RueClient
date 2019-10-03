@@ -27,13 +27,24 @@ You can learn more about Rue and the Rue Network in our [introduction piece](htt
 
 # Getting Started
 
-1.	Make sure you have [`git`](https://git-scm.com/), [`node`](https://nodejs.org/), and [`npm`](https://www.npmjs.com/get-npm) installed.
+1.	Make sure you have [`git`](https://git-scm.com/), [`node`](https://nodejs.org/), [`npm`](https://www.npmjs.com/get-npm) and build-essentials (Linx) installed.
 2.	Clone this repository locally.
 3.	Add `127.0.0.1 calypso.localhost` to your local `hosts` file.
 4.	Execute `npm start` from the root directory of the repository.
 5.	Open [`calypso.localhost:3000`](http://calypso.localhost:3000/) in your browser.
 
 Need more detailed installation instructions? [We have them](./docs/install.md).
+
+# Common Issues:
+Most build issues relate to incorrect package versions and other challenges introduced from the setup of WP Calypso, you can often find most issues reported and resolved here: https://github.com/Automattic/wp-calypso/issues
+
+Common troubleshooting steps:
+
+1. To start use [n](https://github.com/tj/n) to ensure you have the correct version of NodeJS and NPM.
+2. You may need to install certain packages manually. The most common ones users have issues with are `gyp`, `ncp` and `transpile`. They can be installed with `npm install [package name]`.
+3. You may need to run an `npm-clean-install` to remove old package caches. If you do run a clean install you may also need to manually reinstall the packages in tip #2.
+4. If you get a build or make errors you may need to run the command `sudo apt-get install build-essential` prior to building.
+5. In some version of Linux you may have installed build-essnetials but be lacking g++ if you have a g++ related error you can use `sudo apt-get install build-essential g++`
 
 # Deployment of Token:
 
