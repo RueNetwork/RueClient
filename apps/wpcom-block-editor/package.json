@@ -33,7 +33,7 @@
 		"@wordpress/rich-text": "3.2.2",
 		"@wordpress/url": "2.3.3",
 		"debug": "^3.2.6",
-		"jquery": "^1.12",
+		"jquery": "^3.5",
 		"lodash": "4.17.14",
 		"react": "16.8.6",
 		"tinymce": "4.8.5"
