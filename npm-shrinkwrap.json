@@ -20,7 +20,6 @@
 			"version": "file:packages/calypso-build",
 			"dev": true,
 			"requires": {
-				"@automattic/calypso-color-schemes": "file:packages/calypso-color-schemes",
 				"@babel/core": "7.5.5",
 				"@babel/plugin-proposal-class-properties": "7.5.5",
 				"@babel/plugin-syntax-dynamic-import": "7.2.0",
@@ -69,10 +68,7 @@
 			}
 		},
 		"@automattic/format-currency": {
-			"version": "file:packages/format-currency",
-			"requires": {
-				"i18n-calypso": "file:packages/i18n-calypso"
-			}
+			"version": "file:packages/format-currency"
 		},
 		"@automattic/load-script": {
 			"version": "file:packages/load-script",
@@ -14972,9 +14968,9 @@
 			}
 		},
 		"lodash": {
-			"version": "4.17.14",
-			"resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.14.tgz",
-			"integrity": "sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw=="
+			"version": "4.17.19",
+			"resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz",
+			"integrity": "sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ=="
 		},
 		"lodash-es": {
 			"version": "4.17.14",
