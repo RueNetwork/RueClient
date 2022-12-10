@@ -92,7 +92,7 @@
 		"ethereumjs-tx": "2.1.0",
 		"events": "3.0.0",
 		"exports-loader": "0.7.0",
-		"express": "4.16.4",
+		"express": "4.17.3",
 		"express-useragent": "1.0.12",
 		"filesize": "3.6.1",
 		"flag-icon-css": "3.3.0",
